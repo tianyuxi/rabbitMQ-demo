@@ -1,5 +1,6 @@
 package com.tyx.Controller;
 
+import com.tyx.config.MyCallBack;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -14,7 +15,7 @@ import javax.annotation.PostConstruct;
 @RestController
 @RequestMapping("/confirm")
 @Slf4j
-public class Producer {
+public class ProducerController {
     public static final String CONFIRM_EXCHANGE_NAME = "confirm.exchange";
     @Autowired
     private RabbitTemplate rabbitTemplate;
